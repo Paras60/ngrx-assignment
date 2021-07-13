@@ -2,8 +2,9 @@ Frontend:
     npm install
     npm start
 
-Backend:
-    npm run server
-
 Tests:
     ng test
+
+Login Credentials:
+  username: paras@gmail.com 
+  password: test123

@@ -18,8 +18,6 @@ export class AuthService {
         if(email=='paras@gmail.com' && password == 'test123'){
           this.user= {id:1, email:'paras@gmail.com'}
           return of( this.user );
-
-
         }
     }
 
