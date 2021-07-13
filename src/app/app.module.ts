@@ -26,7 +26,7 @@ import {AuthGuard} from './auth/auth.guard';
 
 const routes: Routes = [
     {
-        path: 'courses',
+        path: 'home',
         loadChildren: () => import('./courses/courses.module').then(m => m.CoursesModule),
         canActivate: [AuthGuard]
     },

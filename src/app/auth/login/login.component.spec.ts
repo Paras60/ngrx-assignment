@@ -80,12 +80,15 @@ describe("Login Component", () => {
     component.form.get("password").setValue("test");
 
     expect(component.form.valid).toBeTruthy();
+    component.login();
   });
 
   it("should login form is invalid", () => {
     component.form.get("email").setValue(null);
+    component.login();
     expect(component.form.valid).toBeFalsy();
     component.form.get("password").setValue(null);
+    component.login();
     expect(component.form.valid).toBeFalsy();
   });
 

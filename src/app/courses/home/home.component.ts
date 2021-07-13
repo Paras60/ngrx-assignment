@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
     beginnerCourses$: Observable<Course[]>;
 
     advancedCourses$: Observable<Course[]>;
+  x: string;
 
 
     constructor(
@@ -32,7 +33,8 @@ export class HomeComponent implements OnInit {
     }
 
     ngOnInit() {
-      this.reload();
+      // this.reload();
+     this.x = sessionStorage.getItem("username");
     }
 
   reload() {

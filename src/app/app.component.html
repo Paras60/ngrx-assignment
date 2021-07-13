@@ -22,8 +22,7 @@
     <mat-toolbar color="accent">
         <span>My Application</span>
         <a style="float: right;margin-left: auto;cursor:pointer" mat-list-item (click)="logout()" *ngIf="isLoggedIn$ | async">
-            <mat-icon>exit_to_app</mat-icon>
-            <span>Logout</span>
+            <mat-icon (click)="logout()">logout</mat-icon>
         </a>
     </mat-toolbar>
 
