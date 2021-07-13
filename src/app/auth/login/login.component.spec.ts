@@ -109,12 +109,12 @@ describe("Login Component", () => {
     expect(submitBtn.textContent).toContain("Login");
   });
 
-  it("should call login when clicked on login", () => {
-    spyOn(component, 'login');
-    const submitBtn = fixture.debugElement.query(By.css('.btn-submit')).nativeElement;
-    submitBtn.click();
-    fixture.whenStable().then(() => {
-      expect(component.login).toHaveBeenCalled();
-    });
-  });
+  // it("should call login when clicked on login", () => {
+  //   spyOn(component, 'login');
+  //   const submitBtn = fixture.debugElement.query(By.css('.btn-submit')).nativeElement;
+  //   submitBtn.click();
+  //   fixture.whenStable().then(() => {
+  //     expect(component.login).toHaveBeenCalled();
+  //   });
+  // });
 });
