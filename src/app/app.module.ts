@@ -21,12 +21,14 @@ import {RouterState, StoreRouterConnectingModule} from '@ngrx/router-store';
 import {EffectsModule} from '@ngrx/effects';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {metaReducers, reducers} from './reducers';
+import {AuthGuard} from './auth/auth.guard';
 
 
 const routes: Routes = [
     {
         path: 'courses',
-        redirectTo: 'CourseComponent'
+        loadChildren: () => import('./courses/courses.module').then(m => m.CoursesModule),
+        canActivate: [AuthGuard]
     },
     {
         path: '**',

@@ -27,8 +27,8 @@ export class LoginComponent implements OnInit {
       private store: Store<AppState>) {
 
       this.form = fb.group({
-          email: ['test@gmail.com', [Validators.required]],
-          password: ['test@123', [Validators.required]]
+          email: ['paras@gmail.com', [Validators.required]],
+          password: ['test', [Validators.required]]
       });
 
   }
@@ -40,11 +40,26 @@ export class LoginComponent implements OnInit {
   login() {
 
       const val = this.form.value;
-      console.log(val.email, val.password);
-      if(val.email == 'test@gmail.com' && val.password == 'test@123'){
-        console.log(val.email, val.password);
-          this.router.navigate(["courses"]);
-         }
+
+      this.auth.login(val.email, val.password)
+          .pipe(
+              tap(user => {
+
+                  console.log(user);
+
+                  this.store.dispatch(login({user}));
+
+                  this.router.navigateByUrl('/courses');
+
+              })
+          )
+          .subscribe(
+              noop,
+              () => alert('Login Failed')
+          );
+
+
+
   }
 
 }
