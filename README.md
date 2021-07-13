@@ -15,5 +15,12 @@ Try to keep state immutable
 
 #Run the application
 
-Npm install
-Npm start
+Frontend=>
+  Npm install
+  Npm start
+  
+Backend=>
+  npm run server
+  
+Run test cases=>
+  ng test
