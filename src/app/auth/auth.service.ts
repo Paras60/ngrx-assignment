@@ -15,7 +15,7 @@ export class AuthService {
     }
 
     login(email:string, password:string): Observable<User> {
-        if(email=='paras@gmail.com' && password == 'test'){
+        if(email=='paras@gmail.com' && password == 'test123'){
           this.user= {id:1, email:'paras@gmail.com'}
           return of( this.user );
 
