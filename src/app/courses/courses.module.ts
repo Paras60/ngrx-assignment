@@ -1,10 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {HomeComponent} from './home/home.component';
-import {CoursesCardListComponent} from './courses-card-list/courses-card-list.component';
-import {EditCourseDialogComponent} from './edit-course-dialog/edit-course-dialog.component';
 import {CoursesHttpService} from './services/courses-http.service';
-import {CourseComponent} from './course/course.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
@@ -24,18 +21,11 @@ import {RouterModule, Routes} from '@angular/router';
 import { EntityDataService, EntityDefinitionService, EntityMetadataMap} from '@ngrx/data';
 import {compareCourses, Course} from './model/course';
 
-import {compareLessons, Lesson} from './model/lesson';
-
-
 export const coursesRoutes: Routes = [
   {
     path: '',
     component: HomeComponent
 
-  },
-  {
-    path: ':courseUrl',
-    component: CourseComponent
   }
 ];
 
@@ -60,18 +50,11 @@ export const coursesRoutes: Routes = [
     RouterModule.forChild(coursesRoutes)
   ],
   declarations: [
-    HomeComponent,
-    CoursesCardListComponent,
-    EditCourseDialogComponent,
-    CourseComponent
+    HomeComponent
   ],
   exports: [
-    HomeComponent,
-    CoursesCardListComponent,
-    EditCourseDialogComponent,
-    CourseComponent
+    HomeComponent
   ],
-  entryComponents: [EditCourseDialogComponent],
   providers: [
     CoursesHttpService
   ]
