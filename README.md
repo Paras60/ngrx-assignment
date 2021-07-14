@@ -4,7 +4,7 @@ Login Page
 
 ## Description
 
-Login Page using Angular,HTML and CSS
+Login Page using Angular, Typescript, HTML and CSS
 
 ## Getting Started
 
