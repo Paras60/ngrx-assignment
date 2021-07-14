@@ -1,11 +1,3 @@
-Frontend:
-    npm install
-    npm start
-
-Tests:
-    ng test
-
-
 # Project Title
 
 Login Page
@@ -32,13 +24,6 @@ Login Page using Angular,HTML and CSS
 ```
 Test Coverage
 * ng test --code-coverage
-```
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
 ```
 
 ## Authors
