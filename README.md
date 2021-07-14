@@ -47,12 +47,12 @@ When you want the app, developed on Angular, perform in terms of user experience
 * Run Time Performance
 
     **Load Time Performance**:To optimize load time performance, following are some of the essential tools, tips and tricks which can help boost app performance.
-    *AOT
-    *Lazy loading feature module
-    *Server side rendering
-    *Build Optimizer flag
+    * AOT
+    * Lazy loading feature module
+    * Server side rendering
+    * Build Optimizer flag
 
     **Run Time Performance**:To optimize run time performance, following are some of the essential tools, tips and tricks which can help boost app performance.
-    *Detach Change Detection
-    *Use trackBy instead of ngFor
-    *Use Prod-Mode
+    * Detach Change Detection
+    * Use trackBy instead of ngFor
+    * Use Prod-Mode
