@@ -8,22 +8,17 @@ import {
 import { environment } from '../../environments/environment';
 import {routerReducer} from '@ngrx/router-store';
 
-export interface AppState {
-
-}
+// tslint:disable-next-line
+export interface AppState {}
 
 export const reducers: ActionReducerMap<AppState> = {
     router: routerReducer
 };
 
-export function logger(reducer:ActionReducer<any>)
+export function logger(reducer: ActionReducer<any>)
     : ActionReducer<any> {
-    return (state, action) => {
-        return reducer(state, action);
-    }
-
+    return (state, action) => reducer(state, action);
 }
-
 
 export const metaReducers: MetaReducer<AppState>[] =
     !environment.production ? [logger] : [];
