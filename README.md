@@ -41,7 +41,6 @@ choudharyparas61@gmail.com
 This project is licensed under the MIT License - see the LICENSE.md file for details
 
 ## Things that can be improved
-When it comes to web app framework, AngularJS is the highest used technology today. 
 When you want the app, developed on Angular, perform in terms of user experience and speed and performance, there are two things which you need to be more focused upon;
 * Load Time Performance
 * Run Time Performance
